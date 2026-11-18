@@ -1,0 +1,57 @@
+================================================================================
+             DERM-SOTA: SKIN LESION CLASSIFICATION PROJECT
+                         EXECUTION GUIDE
+================================================================================
+
+[STEP 1] EXTRACT THE PROJECT
+--------------------------------------------------------------------------------
+1. Extract the ZIP file into a folder on your computer.
+2. Open a terminal (Command Prompt or PowerShell) inside the extracted folder.
+
+
+[STEP 2] INSTALL DEPENDENCIES
+--------------------------------------------------------------------------------
+Run the following command to install required packages:
+
+pip install -r requirements.txt
+
+
+[STEP 3] LAUNCH THE CLINICAL DASHBOARD
+--------------------------------------------------------------------------------
+To start the live web interface:
+
+streamlit run app.py
+
+Then open your browser and navigate to:
+http://localhost:8501
+
+Dashboard Features:
+- Select sample cases from the sidebar dropdown or drag-and-drop your own images.
+- Inspect raw captures, DullRazor hair-removal preprocessed images, and Grad-CAM heatmaps.
+- View predicted classes, probability distributions, and epistemic uncertainty scores.
+- Expand the bottom panel to view the complete validation telemetry and ablation study.
+
+
+[STEP 4] TEST MODEL CHECKPOINT ON REAL PATIENT SAMPLES
+--------------------------------------------------------------------------------
+To run inference on authentic patient dermoscopy test captures and view individual
+case predictions and overall score:
+
+python eval_real_samples.py
+
+
+[STEP 5] RUN FULL VALIDATION BENCHMARK (ALL 1,497 TEST CASES)
+--------------------------------------------------------------------------------
+To compute the complete held-out evaluation report, per-class breakdown,
+and generate the confusion matrix:
+
+python evaluate.py
+
+
+[STEP 6] RUN AUTOMATED VERIFICATION TESTS
+--------------------------------------------------------------------------------
+To verify all pipeline components and unit tests:
+
+python test_inference.py
+
+================================================================================

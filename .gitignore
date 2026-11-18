@@ -1,0 +1,33 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.tmp
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Virtual Environments
+venv/
+env/
+.env
+
+# LaTeX / IEEE paper files (excluded as requested)
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+*.toc
+*.fls
+*.fdb_latexmk
+*IEEE*
+
+# Temporary Preview & Crop images
+*preview*
+*crop*
+thumb_*
+*.zip
+
+# Operating System files
+.DS_Store
+Thumbs.db

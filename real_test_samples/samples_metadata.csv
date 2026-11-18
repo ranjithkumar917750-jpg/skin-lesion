@@ -1,0 +1,15 @@
+image_id,lesion_id,dx,age,sex,localization,path
+ISIC_0025178,HAM_0005282,akiec,65.0,male,lower extremity,./real_test_samples\ISIC_0025178.jpg
+ISIC_0029659,HAM_0000673,akiec,70.0,female,face,./real_test_samples\ISIC_0029659.jpg
+ISIC_0028238,HAM_0005776,bcc,80.0,male,back,./real_test_samples\ISIC_0028238.jpg
+ISIC_0029230,HAM_0007141,bcc,50.0,male,trunk,./real_test_samples\ISIC_0029230.jpg
+ISIC_0025099,HAM_0004641,bkl,60.0,male,abdomen,real_test_samples/ISIC_0025099.jpg
+ISIC_0030105,HAM_0003670,bkl,80.0,female,unknown,real_test_samples/ISIC_0030105.jpg
+ISIC_0029760,HAM_0004330,df,70.0,male,lower extremity,./real_test_samples\ISIC_0029760.jpg
+ISIC_0030244,HAM_0007526,df,50.0,male,lower extremity,./real_test_samples\ISIC_0030244.jpg
+ISIC_0026120,HAM_0007310,mel,55.0,male,back,./real_test_samples\ISIC_0026120.jpg
+ISIC_0030443,HAM_0006722,mel,85.0,female,lower extremity,./real_test_samples\ISIC_0030443.jpg
+ISIC_0029979,HAM_0004233,nv,45.0,female,back,./real_test_samples\ISIC_0029979.jpg
+ISIC_0032285,HAM_0006830,nv,45.0,female,abdomen,./real_test_samples\ISIC_0032285.jpg
+ISIC_0028163,HAM_0006617,vasc,25.0,female,abdomen,real_test_samples/ISIC_0028163.jpg
+ISIC_0029404,HAM_0002692,vasc,10.0,male,trunk,./real_test_samples\ISIC_0029404.jpg
