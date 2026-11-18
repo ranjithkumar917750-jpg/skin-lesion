@@ -248,9 +248,20 @@ def load_cached_model(checkpoint_path: str = "best_model.pth"):
     model = build_model(num_classes=7, pretrained=False, dropout_rate=0.4)
     
     if os.path.exists(checkpoint_path):
-        state_dict = torch.load(checkpoint_path, map_location=device)
-        model.load_state_dict(state_dict)
-        checkpoint_status = f"Validated SOTA Weights ({os.path.basename(checkpoint_path)})"
+        # Auto-pull real weights if running inside a container with Git LFS pointer
+        if os.path.getsize(checkpoint_path) < 1000:
+            try:
+                import subprocess
+                subprocess.run(["git", "lfs", "pull"], check=False)
+            except Exception:
+                pass
+        try:
+            state_dict = torch.load(checkpoint_path, map_location=device)
+            model.load_state_dict(state_dict)
+            checkpoint_status = f"Validated SOTA Weights ({os.path.basename(checkpoint_path)})"
+        except Exception:
+            model = build_model(num_classes=7, pretrained=True, dropout_rate=0.4)
+            checkpoint_status = "Pretrained Model Weights"
     else:
         model = build_model(num_classes=7, pretrained=True, dropout_rate=0.4)
         checkpoint_status = "Pretrained Model Weights"
